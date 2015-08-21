@@ -10,8 +10,8 @@ Yeah, we should all be doing a lot more of that and a lot less netflix, tinder, 
 Here's how you do it. 
 
 
-### Instal It: 
-`chmod +x gitodo && cp gitodo /usr/local/bin/`
+### Install It: 
+`chmod +x disco && cp disco /usr/local/bin/`
 
 ### Then you disco. 
 It goes a little something like this: 
