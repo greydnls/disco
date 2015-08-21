@@ -1,6 +1,6 @@
-# ThisWeekDisco
+# discō:
 
-**discō**: verb‎(present infinitive discere, perfect active didicī, supine discitum); third conjugation
+verb ‎(present infinitive discere, perfect active didicī, supine discitum); third conjugation
 
 - I learn
 - (drama) I study, practice
