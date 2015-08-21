@@ -1,3 +1,25 @@
+#!/bin/bash
+
+function readContent()
+{
+    content=$(< ".disco.history" )
+}
+
+function isInHistory()
+{
+    readContent
+
+    if [[ $content == *"$1"* ]]; then
+        return 0
+    fi
+
+    content="$content $trim_title"
+
+     echo "$content" > ".disco.history"
+
+    return 1
+}
+
 function findMeAPage()
 {
 	location=$(curl -Ls -o /dev/null -w %{url_effective} https://en.wikipedia.org/wiki/Special:Random)
@@ -15,7 +37,11 @@ read keeplooking
 if [ $keeplooking == "y" ]; then
 	findMeAPage
 else
-	open $location
+    if  ! isInHistory $trim_title ; then
+	    open $location
+    else
+        findMeAPage
+    fi
 fi
 
 }
