@@ -1,9 +1,9 @@
 # discō:
 
-verb ‎(present infinitive discere, perfect active didicī, supine discitum); third conjugation
-
-- I learn
-- (drama) I study, practice
+> verb ‎(present infinitive discere, perfect active didicī, supine discitum); third conjugation
+> 
+> - I learn
+> - (drama) I study, practice
 
 Yeah, we should all be doing a lot more of that and a lot less netflix, tinder, tumblr, hulu or twitter. No offense to the above platforms, you're all lovely and sharply dressed. But let's learn a little. 
 
