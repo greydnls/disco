@@ -2,26 +2,32 @@ function findMeAPage()
 {
 	location=$(curl -Ls -o /dev/null -w %{url_effective} https://en.wikipedia.org/wiki/Special:Random)
 
-title=$(curl -Ls "$location"| grep \<title\>|sed "s/\<title\>\([^<]*\).*/\1/")
+	title=$(curl -Ls "$location"| grep \<title\>|sed "s/\<title\>\([^<]*\).*/\1/")
 
-trim_title=${title%" - Wikipedia, the free encyclopedia"}
+	trim_title=${title%" - Wikipedia, the free encyclopedia"}
 
 echo "
+Look what I found: \033[1m$trim_title\033[0m."
+echo "Sounds Fascinating! Do you want to read it? [y/N/q]"
+	
+	read -n 1 -s readit
 
-Look what I found! $trim_title!! Sounds Fascinating"
-echo "Should we keep looking?[y/N]"
-read keeplooking
+	if [[ $readit = "" ]]; then
+		yay
+	elif [ $readit == "y" ]; then
+		yay
+	elif [ $readit == "q" ]; then
+		exit 0;
+	else
+		echo "\n...\n"
+		findMeAPage
+	fi
+}
 
-if [ $keeplooking == "y" ]; then
-	findMeAPage
-else
+function yay()
+{
 	open $location
-fi
-
+	echo "Yay! --> \033[1m$location\033[0m"
 }
 
 findMeAPage
-
-
-
-
