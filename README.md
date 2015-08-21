@@ -19,10 +19,10 @@ It goes a little something like this:
 ```
 $ disco
 
-Look what I found! Fews Upper!! Sounds Fascinating
+Look what I found! List of moths of Russia (Gelechioidea)!! Sounds Fascinating
 Should we keep looking?[y/N]
 y
 
-Look what I found! Nebria uluderensis!! Sounds Fascinating
+Look what I found! Tekamah, Nebraska!! Sounds Fascinating
 Should we keep looking?[y/N]
 ```
