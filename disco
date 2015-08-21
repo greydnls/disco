@@ -1,0 +1,27 @@
+function findMeAPage()
+{
+	location=$(curl -Ls -o /dev/null -w %{url_effective} https://en.wikipedia.org/wiki/Special:Random)
+
+title=$(curl -Ls "$location"| grep \<title\>|sed "s/\<title\>\([^<]*\).*/\1/")
+
+trim_title=${title%" - Wikipedia, the free encyclopedia"}
+
+echo "
+
+Look what I found! $trim_title!! Sounds Fascinating"
+echo "Should we keep looking?[y/N]"
+read keeplooking
+
+if [ $keeplooking == "y" ]; then
+	findMeAPage
+else
+	open $location
+fi
+
+}
+
+findMeAPage
+
+
+
+
