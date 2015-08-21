@@ -26,3 +26,7 @@ y
 Look what I found! Tekamah, Nebraska!! Sounds Fascinating
 Should we keep looking?[y/N]
 ```
+
+Keep pressing "y", you'll keep looking, falling farther and farther down the rabbit hole. 
+
+Press "N" and the selected article will open in your browser. From there, things will only get curiouser and curiouser. 
